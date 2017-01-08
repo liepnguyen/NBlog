@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NBlog.Core.Persistence;
+using NBlog.Core.Entities;
 
 namespace NBlog.Web.Controllers
 {
@@ -14,11 +15,10 @@ namespace NBlog.Web.Controllers
         public HomeController(BloggingContext context)
         {
             _context = context;
-        } 
+        }
 
         public IActionResult Index()
         {
-            
             return View();
         }
 

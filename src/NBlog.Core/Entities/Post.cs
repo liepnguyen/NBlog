@@ -15,5 +15,26 @@ namespace NBlog.Core.Entities
         public Guid BlogId { get; set; }
 
         public Blog Blog { get; set; }
+
+        public virtual IList<Comment> Comments { get; set; }
+
+        public User Author { get; set; }
+
+        public Guid AuthorId { get; set; }
+
+        public Category Category { get; set; }
+
+        public Guid CategoryId { get; set; }
+
+        public virtual IList<Tag> Tags { get; set; }
+
+        public bool IsPublished { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        public Post()
+        {
+            Comments = new List<Comment>();
+        }
     }
 }

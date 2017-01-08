@@ -10,6 +10,11 @@ namespace NBlog.Core.Entities
     {
         public string Url { get; set; }
 
-        public List<Post> Posts { get; set; }
+        public virtual IList<Post> Posts { get; set; }
+
+        public Blog()
+        {
+            Posts = new List<Post>();
+        }
     }
 }

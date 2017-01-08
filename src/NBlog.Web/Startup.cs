@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace NBlog.Web
 {
-    public class Startup
+    public partial class Startup
     {
         public Startup(IHostingEnvironment env)
         {
@@ -51,6 +51,8 @@ namespace NBlog.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            ConfigureAuth(app);
 
             app.UseStaticFiles();
 
